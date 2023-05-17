@@ -1,0 +1,43 @@
+@import 'layout';
+@import 'conf';
+
+.tokenLogo{
+    width: 50px;
+    height: 50px;
+}
+.tokenPricesContainer{
+    display: grid;
+    grid-template-areas: 
+    "dpo dpo dpo"
+    "dpo dpo dpo"
+    "dpo dpo dpo"
+    "arb eth btc"
+    "arb eth btc";
+    .tokenPrice_top{
+        @extend %box-type-1;
+        grid-area: dpo;
+    
+    }
+    .tokenPrice_top2{
+        @extend %box-type-1;
+        font-size: 0.96rem;
+        grid-area: arb;
+        padding-left:0.5em;
+        padding-right: 0.5em; 
+     
+    }
+    .tokenPrice_top3{
+        @extend %box-type-1;
+        font-size: 0.96rem;
+        grid-area: eth;
+        padding-left:0.5em;
+        padding-right: 0.5em; 
+    }
+    .tokenPrice_top4{
+        @extend %box-type-1;
+        font-size: 0.96rem;
+        grid-area: btc;
+        padding-left:0.5em;
+        padding-right: 0.5em; 
+    }
+}
