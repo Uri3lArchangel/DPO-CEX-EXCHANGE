@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.8.3",
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "antd": "^5.5.0",
     "autoprefixer": "10.4.14",
     "chart.js": "^4.3.0",
     "chartjs": "^0.3.24",
@@ -21,6 +23,7 @@
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-paypal-js": "^0.0.1-security",
     "sass": "^1.62.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"

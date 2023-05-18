@@ -1,0 +1,27 @@
+@media screen and (min-width:414px) {
+    .tokenPricesContainer {
+        width: 50%;
+    }
+    .Container{
+        width: 46%;
+        margin: auto;
+       small{
+        font-size: 1.4rem;
+       }
+    
+       h1,h2{
+        font-size: 1.5rem;
+       }
+        button,input{
+            font-size: 1.3rem;
+            height: 50px;
+        }
+    }
+    .footerContainer{
+        a{
+            width: 20%;
+        }
+        }
+ 
+   
+}

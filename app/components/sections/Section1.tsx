@@ -12,7 +12,7 @@ const Section1 = () => {
       <div className={home.tokenPrice_top}>
         <figure>
           <Image src={dpoTokenLogo} className={home.tokenLogo} alt="DPO Token Logo" />
-          <TokenPriceDetail name='DPO' price={0.001} change='+2.4%' />
+          <TokenPriceDetail name='DPO' price={0.001} change='' />
         </figure>
       </div>
       <div className={home.tokenPrice_top2}>

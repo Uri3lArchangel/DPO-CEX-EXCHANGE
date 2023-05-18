@@ -1,6 +1,7 @@
 import "./globals.css";
 import { B612,  } from "next/font/google";
 import layout from './styles/scss/index.module.scss'
+import {PayPalScriptProvider} from "@paypal/react-paypal-js"
 
 const b612 = B612({
   weight: ["400","700"],

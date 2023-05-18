@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+.ant-radio-group-solid :where(.css-dev-only-do-not-override-15rg2km).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    background-color:transparent;
+    background-image: linear-gradient(to bottom,cyan,60%,#33a);
+    transition:all 0.3s linear;
+    color: white;
+    border: 0;
+}
+.ant-radio-group-solid :where(.css-dev-only-do-not-override-15rg2km).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover{
+    background-image: linear-gradient(to bottom,cyan,20%,#33a);
+    color: white;
+
+}
+a{
+    text-decoration: none;
+}
