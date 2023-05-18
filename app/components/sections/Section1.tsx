@@ -17,17 +17,17 @@ const Section1 = () => {
       </div>
       <div className={home.tokenPrice_top2}>
         <figure>
-        <TokenPriceDetail name='ARB' price={6} change='' />
+        <TokenPriceDetail name='ARB' price={1.16} change='' />
         </figure>
       </div>
       <div className={home.tokenPrice_top3}>
       <figure>
-        <TokenPriceDetail name='ETH' price={1400} change='' />
+        <TokenPriceDetail name='ETH' price={1804.40} change='' />
         </figure>
       </div>
       <div className={home.tokenPrice_top4}>
       <figure>
-        <TokenPriceDetail name='BTC' price={27500} change='' />
+        <TokenPriceDetail name='BTC' price={26866.09} change='' />
         </figure>
       </div>
     </div>
