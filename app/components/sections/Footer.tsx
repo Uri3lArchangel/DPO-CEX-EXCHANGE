@@ -26,7 +26,7 @@ const Footer = () => {
                   <li>
                   <figcaption>
                       <h5>
-                      DPO Central panel - Sit back an monitor a private process over a public blockchain
+                      DPO Central panel - Sit back and monitor a private process over a public blockchain
                       </h5>
                       <Link href={"https://dpo-central-pannel.vercel.app/"} target="_blank" >Go To</Link>
                     </figcaption>
