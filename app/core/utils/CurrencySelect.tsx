@@ -1,10 +1,8 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { CheckboxOptionType, RadioChangeEvent } from "antd";
 import { Radio } from "antd";
 
-
 const currency_options: (string | number | CheckboxOptionType)[] | undefined = [
-
   { label: "USD", value: "USD" },
   { label: "CAD", value: "CAD" },
   { label: "EUR", value: "EUR" },
@@ -13,25 +11,25 @@ const currency_options: (string | number | CheckboxOptionType)[] | undefined = [
   { label: "AUD", value: "AUD" },
 ];
 
-
-interface Props{
-    set:React.Dispatch<React.SetStateAction<string>>;
+interface Props {
+  set: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const CurrencySelect = () => {
-    const [val,setVal]=useState(window.sessionStorage.getItem('currency'));
+  const [val, setVal] = useState("");
 
-  
+  useEffect(() => {
+    setVal(window.sessionStorage.getItem("currency")!)
+  });
 
   const onChange4 = ({ target: { value } }: RadioChangeEvent) => {
-    setVal(value)
-    window.sessionStorage.setItem('currency',value)
-    window.location.reload()
+    setVal(value);
+    window.sessionStorage.setItem("currency", value);
+    window.location.reload();
   };
 
   return (
     <>
-    
       <Radio.Group
         options={currency_options}
         onChange={onChange4}
@@ -42,6 +40,5 @@ const CurrencySelect = () => {
     </>
   );
 };
-
 
 export default CurrencySelect;

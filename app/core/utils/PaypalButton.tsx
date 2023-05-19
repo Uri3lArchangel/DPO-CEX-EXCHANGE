@@ -38,8 +38,7 @@ console.log(amount)
             window.location.reload
             return actions.reject()
           })}
-          console.log("amount",am)
-         return actions.reject()
+         return actions.resolve()
 
         
       }}
