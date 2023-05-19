@@ -5,6 +5,7 @@ import Section2 from "./components/sections/Section2";
 import index from '@/app/styles/scss/index.module.scss'
 
 const page = () => {
+  console.log("env",process.env.CLIENTID!)
   return (
     <>
       <article>
