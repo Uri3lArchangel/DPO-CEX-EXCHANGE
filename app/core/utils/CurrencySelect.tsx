@@ -13,19 +13,20 @@ const currency_options: (string | number | CheckboxOptionType)[] | undefined = [
 
 interface Props {
   set: React.Dispatch<React.SetStateAction<string>>;
+  setScript:React.Dispatch<React.SetStateAction<number>>;
 }
 
-const CurrencySelect = () => {
-  const [val, setVal] = useState("");
+const CurrencySelect = ({set,setScript}:Props) => {
+  const [val, setVal] = useState("USD");
 
-  useEffect(() => {
-    setVal(window.sessionStorage.getItem("currency")!)
-  });
+
 
   const onChange4 = ({ target: { value } }: RadioChangeEvent) => {
+    set(value)
     setVal(value);
-    window.sessionStorage.setItem("currency", value);
-    window.location.reload();
+    setScript(prev=>prev + 1)
+
+    
   };
 
   return (

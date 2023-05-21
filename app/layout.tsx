@@ -21,6 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head></head>
       <body className={b612.className}>
         <main className={layout.Main}>{children}</main>
       </body>
