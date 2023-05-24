@@ -1,7 +1,7 @@
 @keyframes hideNav {
   0%,
   10% {
-    left: 2%;
+    left: 5px;
     transform: rotateZ(0deg);
   }
   10%,
@@ -11,13 +11,13 @@
   50%,
   100% {
     transform: rotateZ(-90deg);
-    left: -140px;
+    left: -230px;
   }
 }
 @keyframes showNav {
     0%,
     10% {
-      left: -140px;
+      left: -230px;
       transform: rotateZ(-90deg);
     }
     10%,
@@ -28,7 +28,7 @@
     50%,
     100% {
       transform: rotateZ(0deg);
-      left: 2%;
+      left: 5px;
     }
   }
 

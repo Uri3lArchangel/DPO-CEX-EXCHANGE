@@ -1,0 +1,52 @@
+@media screen and (min-width: 414px) {
+  .mainContainer {
+    left: 0;
+    top: 25%;
+    right: 0;
+    margin: auto;
+  
+  }
+  .SelectToken{
+    width: 40%;
+}
+
+.Container {
+    input{
+        height: 56px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    & > input{
+    width: 40%;
+}
+button{
+    height: 56px;
+    width: 35%;
+
+}
+}
+
+}
+
+@media screen and (min-width:1200px) {
+    .SelectToken{
+        width: 20%;
+    }
+    .Container {
+        input{
+            height: 56px;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            width: 30%;
+        }
+        & > input{
+        width: 30%;
+    }
+    button{
+        height: 56px;
+        width: 15%;
+    
+    }
+    }
+    
+}

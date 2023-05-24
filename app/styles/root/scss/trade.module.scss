@@ -24,22 +24,14 @@
     }
 }
 
-.resetPrice{
-    background-color: $background-dark;
-    color: white;
-    border: 0;
-    border-radius: 2px;
-    outline: 0;
-    padding: 0.1em 0.3em;
-    display: block;
-    margin: 0.3em auto;
-}
 .icons{
         color: white;
         margin: 0 0.2em;
 }
 .tradeBtns{
+    display: flex;
     button{
+        
         width: 40%;
         height: 40px;
         color: white;
@@ -57,3 +49,6 @@
        
     }
 }
+
+
+@import 'tradeTablet';

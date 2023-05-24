@@ -4,18 +4,23 @@
    
     position: fixed;
     width: 50px;
-    height: 100vh;
-    top: 0;
-    left: 2%;
+    z-index: 2;
+    background-color: red;
+    top: 100px;
+    left: 5px;
     transition: all 2s linear;
    
     ul{
         position: absolute;
-        top: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
         background-color: white;
         width: 100%;
         padding: 0.3em;
         list-style: none;
+        height: 250px;
         border-radius: 5px;
     }
     li{
@@ -28,4 +33,10 @@
     a{
         color: black;
     }
+}
+
+@media screen and (min-width: 414px) {
+.Container{
+    top: 250px;
+}
 }

@@ -31,13 +31,11 @@ const TradeSection = () => {
     },[priceValue])
   return (
     <div className={trade.Container}>
-      <label htmlFor="">Choose your trading price:</label>
+      <label htmlFor="">Market price per DPO token:</label>
+      
       <div>
-        <AiOutlineMinusCircle onClick={()=>{changeDpoPrice("-")}} className={trade.icons} size={20} />
-        <input type="text" value={(priceValue).toFixed(4)} />
-        <AiOutlinePlusCircle onClick={()=>{changeDpoPrice("+")}} className={trade.icons} size={20} />
+        <input type="text" readOnly value={(priceValue).toFixed(2)} />
       </div>
-      <button className={trade.resetPrice}>Set as market price</button>
       <label htmlFor="">Enter amount to trade:</label>
       <div>
       <AiOutlineMinusCircle onClick={()=>changeAmountValue("-")} className={trade.icons} size={20} />

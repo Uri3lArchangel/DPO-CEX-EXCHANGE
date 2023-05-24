@@ -6,11 +6,7 @@ import header from '@/app/styles/root/scss/header.module.scss'
 import { MdCurrencyExchange } from 'react-icons/md'
 
 const Header = () => {
-  const [pair,setPair] = useState("USDT")
-  useEffect(()=>{
-    setPair(window.sessionStorage.getItem("pair")!)
-    
-  },[pair])
+  
   return (
     <header>
     <div className={header.Container}>
