@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import footer from '@/app/styles/scss/index.module.scss'
+import footer from '@/app/styles//portal/scss/index.module.scss'
 
 
 

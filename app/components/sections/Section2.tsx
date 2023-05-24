@@ -1,15 +1,19 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import buy from "@/app/styles/scss/index.module.scss";
-import paypal from "@/app/styles/scss/index.module.scss";
+import buy from "@/app/styles/portal/scss/index.module.scss";
+import paypal from "@/app/styles/portal/scss/index.module.scss";
 import CurrencySelect from "@/app/core/utils/CurrencySelect";
 import Link from "next/link";
 import {
   CreateOrderData,
   CreateOrderActions,
+  OnApproveData,
+  OnApproveActions,
 } from "@paypal/paypal-js/types/components/buttons";
+import { message } from "antd";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { CreateOrderRequestBody } from "@paypal/paypal-js";
+import { useRouter } from "next/navigation";
 interface Props {
   clientId: string;
 }
@@ -17,20 +21,21 @@ interface ratesInterface {
   [key: string]: number;
 }
 export let rates: ratesInterface = {
-  USD: 0.001,
-  CAD: 0.00135,
-  EUR: 0.00093,
-  BRL: 0.00498,
-  CZK: 0.02204,
-  AUD: 0.00151,
+  USD: 10,
+  CAD: 13.51,
+  EUR: 9.24,
+  BRL: 49.57,
+  CZK: 219.15,
+  AUD: 145.84,
 };
 
 const Section2 = ({ clientId }: Props) => {
+  const router = useRouter()
   const [total, setTotal] = useState<string | null>(null);
   const amountRef = useRef<HTMLInputElement>(null);
   const [currency, setCurrency] = useState("USD");
   const [scriptProviderKey, setSCriptProviderKey] = useState(0);
-  const purchase_item:CreateOrderRequestBody = {
+  const purchase_item: CreateOrderRequestBody = {
     purchase_units: [
       {
         description: "DPO Tokens",
@@ -57,6 +62,14 @@ const Section2 = ({ clientId }: Props) => {
     }
   };
 
+  const approved:
+    | ((data: OnApproveData, actions: OnApproveActions) => Promise<void>)
+    | undefined = async (data, actions) => {
+
+    message.success(`Order ${data.orderID} fulfilled from ${data.payerID}`,5)
+      router.refresh()
+    } ;
+
   useEffect(() => {}, [currency, total]);
 
   return (
@@ -73,10 +86,16 @@ const Section2 = ({ clientId }: Props) => {
               setScript={setSCriptProviderKey}
             />
           </div>
-
+          <div>
+            <input
+              type="text"
+              className=""
+              placeholder="Paste Wallet Address In Here"
+            />
+          </div>
           <input
             ref={amountRef}
-            min={100000}
+            min={10}
             onChange={amountInputChange}
             type="number"
             placeholder="Enter amount of tokens"
@@ -104,9 +123,22 @@ const Section2 = ({ clientId }: Props) => {
             >
               <PayPalButtons
                 createOrder={createOrder}
+                onApprove={approved}
                 onClick={() => {
-                  purchase_item.purchase_units[0].amount.value= String((parseInt(amountRef.current!.value) * rates[currency]).toFixed(2))
-                  console.log(clientId);
+                  purchase_item.purchase_units[0].amount.value = String(
+                    (
+                      parseInt(amountRef.current!.value) * rates[currency]
+                    ).toFixed(2)
+                  );
+                  if (
+                    purchase_item.purchase_units[0].amount.value !=
+                    String(
+                      (
+                        parseInt(amountRef.current!.value) * rates[currency]
+                      ).toFixed(2)
+                    )
+                  ) {
+                  }
                 }}
               />
             </PayPalScriptProvider>

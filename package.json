@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
     "@paypal/paypal-js": "^5.1.6",
     "@paypal/react-paypal-js": "^7.8.3",
     "@types/node": "20.1.4",
@@ -32,6 +33,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/paypal-rest-sdk": "^1.7.6"
+    "@types/paypal-rest-sdk": "^1.7.6",
+    "react-icons": "^4.8.0"
   }
 }

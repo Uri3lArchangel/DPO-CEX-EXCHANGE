@@ -1,0 +1,31 @@
+
+.Container{
+    transform: rotateZ(0deg);
+   
+    position: fixed;
+    width: 50px;
+    height: 100vh;
+    top: 0;
+    left: 2%;
+    transition: all 2s linear;
+   
+    ul{
+        position: absolute;
+        top: 35%;
+        background-color: white;
+        width: 100%;
+        padding: 0.3em;
+        list-style: none;
+        border-radius: 5px;
+    }
+    li{
+        border: 1px solid #bbc;
+        cursor: pointer;
+        margin: 0.25em 0.1em;
+        border-radius: 5px;
+        padding: 0.1em;
+    }
+    a{
+        color: black;
+    }
+}

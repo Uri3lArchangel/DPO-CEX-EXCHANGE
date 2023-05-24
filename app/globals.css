@@ -1,20 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes hideNav {
+  0%,
+  10% {
+    left: 2%;
+    transform: rotateZ(0deg);
+  }
+  10%,
+  50% {
+    transform: rotateZ(-90deg);
+  }
+  50%,
+  100% {
+    transform: rotateZ(-90deg);
+    left: -140px;
+  }
 }
-.ant-radio-group-solid :where(.css-dev-only-do-not-override-15rg2km).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
-    background-color:transparent;
-    background-image: linear-gradient(to bottom,cyan,60%,#33a);
-    transition:all 0.3s linear;
-    color: white;
-    border: 0;
-}
-.ant-radio-group-solid :where(.css-dev-only-do-not-override-15rg2km).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover{
-    background-image: linear-gradient(to bottom,cyan,20%,#33a);
-    color: white;
+@keyframes showNav {
+    0%,
+    10% {
+      left: -140px;
+      transform: rotateZ(-90deg);
+    }
+    10%,
+    50% {
+        left: 0;
+      transform: rotateZ(-90deg);
+    }
+    50%,
+    100% {
+      transform: rotateZ(0deg);
+      left: 2%;
+    }
+  }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a{
-    text-decoration: none;
+.ant-radio-group-solid
+  :where(
+    .css-dev-only-do-not-override-15rg2km
+  ).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, cyan, 60%, #33a);
+  transition: all 0.3s linear;
+  color: white;
+  border: 0;
 }
+.ant-radio-group-solid
+  :where(
+    .css-dev-only-do-not-override-15rg2km
+  ).ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  ):hover {
+  background-image: linear-gradient(to bottom, cyan, 20%, #33a);
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.animate-close {
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+  animation-name: hideNav;
+}
+.animate-open {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: showNav;
+  }
+  

@@ -1,30 +1,31 @@
-import "./globals.css";
-import { B612,  } from "next/font/google";
-import layout from './styles/scss/index.module.scss'
-import {PayPalScriptProvider} from "@paypal/react-paypal-js"
+import './globals.css'
+import {Asap_Condensed} from 'next/font/google'
+import React from 'react'
+import root from './styles/root/scss/root.module.scss'
+import Sidenav from './components/navigation/Sidenav'
+import sideNav from '@/app/styles/root/scss/root.module.scss'
+import Header from './components/sections/Header'
 
-const b612 = B612({
-  weight: ["400","700"],
-  subsets: ["latin"],
-});
+const calli = Asap_Condensed({
+    weight:"700",
+    style:"normal",
+    subsets:["latin"]
+})
 
-export const metadata = {
-  title: "DPO-Exchange | Buy and Sell DPO tokens",
-  description:
-    "Trade your DPO tokens using fiat & crypto, Buy and Sell at market price",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <head></head>
-      <body className={b612.className}>
-        <main className={layout.Main}>{children}</main>
-      </body>
-    </html>
-  );
+export const metadata={
+title:"DPO Exchange | Trade your tokens",
+description:"Trade tokens like USDT, VELA, LINK, UNI, DPO and many other arbitrium one chain ERC20 tokens"
+} 
+export default function RootLayout({children}:{children:React.ReactNode}){
+    
+    return(
+        <html lang='en' className={calli.className}>
+            <body>
+            <Header />
+                <main className={root.Main}>
+                    {children}
+                </main>
+            </body>
+        </html>
+    )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import dpoTokenLogo from '@/public/images&gifs/dpo-token-logo.png'
 import TokenPriceDetail from '@/app/components/TokenPriceDetail'
-import home from '@/app/styles/scss/index.module.scss'
+import home from '@/app/styles/portal/scss/index.module.scss'
 import Image from 'next/image'
 
 
