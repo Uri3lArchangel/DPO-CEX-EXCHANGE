@@ -1,7 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Sidenav from '../navigation/Sidenav'
-import sideNav from '@/app/styles/root/scss/root.module.scss'
 import header from '@/app/styles/root/scss/header.module.scss'
 import { MdCurrencyExchange } from 'react-icons/md'
 
@@ -22,7 +20,6 @@ const Header = () => {
             </div>
         </section>
     <aside>
-        <Sidenav />
        
     </aside>
     </div>
