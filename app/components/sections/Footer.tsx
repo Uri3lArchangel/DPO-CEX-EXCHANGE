@@ -16,7 +16,7 @@ const Footer = () => {
                   <li>
                     <figcaption>
                       <h5>
-                      Our official site - Lets Explore together
+                      Explore Direct Private Offers other available services Our official site  - Lets Explore together
                       </h5>
                       <Link href={"https://directprivateoffers.net"} target="_blank">Explore</Link>
                     </figcaption>
@@ -26,7 +26,7 @@ const Footer = () => {
                   <li>
                   <figcaption>
                       <h5>
-                      DPO Central panel - Sit back and monitor a private process over a public blockchain
+                      DPO Central:  monitor your 'private over public' transactions
                       </h5>
                       <Link href={"https://dpo-central-pannel.vercel.app/"} target="_blank" >Go To</Link>
                     </figcaption>

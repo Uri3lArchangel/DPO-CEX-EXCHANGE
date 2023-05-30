@@ -24,9 +24,8 @@ export let rates: ratesInterface = {
   USD: 10,
   CAD: 13.51,
   EUR: 9.24,
-  BRL: 49.57,
-  CZK: 219.15,
-  AUD: 145.84,
+  GBP: 8.06,
+ 
 };
 
 const Section2 = ({ clientId }: Props) => {
@@ -149,12 +148,12 @@ const Section2 = ({ clientId }: Props) => {
             <hr />
           </div>
           <h2>
-            <em>Swap Exchange</em>
+          SWAP EXCHANGE
           </h2>
           <small>Swap DPO tokens with other tokens and vice versa</small>
           <button>
             <Link href={"https://dpo-swap.vercel.app/"} target="_blank">
-              Go To Swap
+              Swap
             </Link>
           </button>
         </div>

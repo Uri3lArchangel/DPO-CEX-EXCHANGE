@@ -6,9 +6,8 @@ const currency_options: (string | number | CheckboxOptionType)[] | undefined = [
   { label: "USD", value: "USD" },
   { label: "CAD", value: "CAD" },
   { label: "EUR", value: "EUR" },
-  { label: "BRL", value: "BRL" },
-  { label: "CZK", value: "CZK" },
-  { label: "AUD", value: "AUD" },
+  { label: "GBP", value: "GBP" },
+
 ];
 
 interface Props {
